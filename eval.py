@@ -19,7 +19,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 from scipy.stats import shapiro
 
 # Load your dataset
-data = pd.read_csv("C:/Users/archi/Desktop/sports betting/sorted/delete.csv")
+data = pd.read_csv("data")
 data = data.drop_duplicates()
 
 # Filter rows with sufficient games played
