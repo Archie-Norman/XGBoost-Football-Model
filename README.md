@@ -14,4 +14,7 @@ Trains a model on the historic data and then makes predictions on the upcoming g
 (yet again redundant to retrain the model every time you want to make a prediction)
 
 **4.py**
-Add the odds to the output from 3.py and then 4.py calculates expected outcome and Kelly criterion for each prediction 
+Add the odds to the output from 3.py, and then 4.py calculates the expected outcome and Kelly criterion for each prediction 
+
+**model eval.py**
+a basic way to evaluate the model, mainly focused on log loss and Brier scores, as the accuracy of probability outputs is more important than the accuracy of classifications  in this context.
