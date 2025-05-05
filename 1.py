@@ -4,7 +4,7 @@ import time
 import os
 
 # Define your RapidAPI key and headers
-api_key = '51e0fd3f97mshe4c041f9b0ad8e6p1c7e6cjsn25f270470d84'
+api_key = 'api-key'
 comp_ids = range(1, 161)  # Competition IDs from 1 to 160
 headers = {
     'X-RapidAPI-Key': api_key,
