@@ -1,28 +1,17 @@
 # XGBoost-Football-Model
 Predicting Football Games Using Historic Results and XGBoost
 
-**report.docx**
-contains a report of the porject 
 
-**step-1(results.api).py**
-the code used to get the data from the api
+**1.py**
+makes requests to the API to get the current results data, including both the previous and upcoming results for this season.
+(This does make redundant calls to the API as if you want new results, you have to get all results.)
 
-**step-2(cleaning).py**
-where the cleaning and feature engineering took place
+**2.py**
+cleans and calculates fixtures such as current points, ELO ratings and other metrics/scores
 
-**step-3(xgboost predict).py**
-code for the model and predictions
+**3.py**
+Trains a model on the historic data and then makes predictions on the upcoming games. Also uses bootstrapping
+(yet again redundant to retrain the model every time you want to make a prediction)
 
-**step-4(EV bets).py**
-code that took the predictions and gives the bets and the bet amounts
-
-*the odds have to be manly input into the csv between steps 3 and 4
-
-**back testing cleaning stuff.py**
-the same as step-2(cleaning).py but altered to take the historical data csvs and clean them all at once. must have all the histical data in the same folder and nothing else.
-
-**back test model with flat bet.py**
-takes the histocial data, spltis it then makes predictions and then calcualtes winnigs.
-
-**eval.py**
-sort of a test bench for the model with evaluation metrics
+**4.py**
+Add the odds to the output from 3.py and then 4.py calculates expected outcome and Kelly criterion for each prediction 
